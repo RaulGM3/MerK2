@@ -26,7 +26,19 @@
         .catch(err => console.error('Error', err));
     }
   </script>-->
-
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDwLSZnZF8zSCPFsnnYR8IRFZ7I5zLoUxM",
+        authDomain: "mercado-84757.firebaseapp.com",
+        databaseURL: "https://mercado-84757.firebaseio.com",
+        projectId: "mercado-84757",
+        storageBucket: "mercado-84757.appspot.com",
+        messagingSenderId: "730007188129"
+      };
+      firebase.initializeApp(config);
+    </script>
   <link href="build/main.css" rel="stylesheet">
 
 </head>

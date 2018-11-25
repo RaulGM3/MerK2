@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Casa</ion-title>
+    <ion-title>Mercado</ion-title>
     <ion-buttons end>
     <button ion-button icon-only (tap) = "onAdd ()">
       <ion-icon name='ios-add-circle-outline'></ion-icon>
@@ -11,10 +11,12 @@
 
 
 <ion-content padding>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
     <ion-item *ngFor="let item of items" (tap) = "selectItem (item)">
-      {{ item }}
+      <div *ngIf = "item.needed == 1">
+        <h1>{{ item.name }}</h1>
+        <p>{{ item.description }}</p>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>
